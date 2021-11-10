@@ -14,6 +14,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: 'products', component: ProductListComponent },
+  { path: 'products/:id', component: ProductPageComponent },
+
 ];
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     ProductService,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
